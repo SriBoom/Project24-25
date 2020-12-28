@@ -5,11 +5,9 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 var engine, world, side1, side2, side3;
-var Paper,paperObject, paper;
+var paperObject, paper;
 
 function preload(){
-
-paper = loadImgae("")
 
 }
 
@@ -20,7 +18,7 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	  paperObject = new Paper(50, 200, 70);
+	  paperObject = new Paper (50, 200, 70);
 	  ground = new Ground(600,height,1200,20);
 
     side1 = createSprite(350, 650, 209, 20);

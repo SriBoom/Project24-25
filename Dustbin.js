@@ -1,5 +1,5 @@
-class Paper{
-    constructor(x, y, r) 
+class Dustbin{
+    constructor(x, y) 
     {
   ​    var options = {
       isStatic: false,
@@ -10,8 +10,8 @@ class Paper{
       
       this.x = x;
       this.y = y;
-  ​    this.r = r
-  ​    this.body = Bodies.circle(this.x, this.y, this.r/2, options);
+  ​    
+  ​    this.body = Bodies.circle(this.x, this.y, options);
   ​    World.add(world, this.body);
      }
   
@@ -19,7 +19,7 @@ class Paper{
       var ballposition = this.body.position;
   ​    push();
   ​    translate(ballposition.x, ballposition.y);
-      ellipse(0,0, this.r, this.r);
+      ellipse(0,0, this.r);
   ​    pop();
      }
   }
