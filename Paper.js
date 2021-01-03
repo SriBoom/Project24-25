@@ -7,6 +7,8 @@ class Paper{
   ​      'friction':0.5,
   ​      'density':1.2
   ​    }
+
+     this.image = loadImage('sprites/paper.png');
       
       this.x = x;
       this.y = y;
@@ -16,10 +18,15 @@ class Paper{
      }
   
      display(){
-      var ballposition = this.body.position;
+
+        var ballposition = this.body.position;
   ​    push();
   ​    translate(ballposition.x, ballposition.y);
-      ellipse(0,0, this.r, this.r);
+    //  ellipse(0,0, this.r, this.r);
+
+    imageMode(CENTER);
+    image(this.image, 0, 0, this.r, this.r);
+
   ​    pop();
      }
   }
